@@ -3,6 +3,12 @@
 The original study resource is in the main branch, YouTude [Link](https://www.youtube.com/watch?v=dam0GPOAvVI&ab_channel=TechWithTim)
 
 
+## Appearance of the app
+![avatar](pics/p1.png)
+
+## Folder structure
+
+```text
 │  main.py                    ##python main.py to set up the local app
 │  Readme.md 
 │  requirements.txt           ## packages to install
@@ -24,6 +30,8 @@ The original study resource is in the main branch, YouTude [Link](https://www.yo
     │      home.html          ## Extension of base.html, home page
     │      login.html         ## Extension of base.html, login page
     │      sign_up.html       ## Extension of base.html, sign up page
+```
+
 
 ## Setup & Installtion
 
