@@ -2,5 +2,22 @@
 <!-- this file is the extension of base.html, 
     all codes here will overide base.html, otherwise use base.html-->
 {% block content%}
-<h1> This is Home</h1>
+<h1 align="center">Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}     <!-- for each note in models.Users, show note.data-->
+  <li class="list-group-item">
+    {{ note.data }}
+    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">&times;</span>  <!-- show "&times" at the right corner of each note-->
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+<form method="POST">
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <br />
+    <div align="center">
+      <button type="submit" class="btn btn-primary">Add Note</button> <!-- show 'Add Note' at the buttom of the page-->
+    </div>
+  </form>
 {% endblock%}
